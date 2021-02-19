@@ -2,9 +2,11 @@ datei_v = input("Geben sie den Namen der Text Datei an:")
 
 datei = open(f"{datei_v}", "r")
 inhalt = datei.read()
+klein = inhalt.lower()
+print(f"Text: {klein}")
 
 code = "0"
-for x in inhalt:
+for x in klein:
     if x == "b":
         code = code + "0 "
     if x == "a":
@@ -73,5 +75,9 @@ for x in inhalt:
         code = code + "000001 "
     if x == "ü":
         code = code + "100001 "
+    if x == "/":
+        code = code + "010001 "
+    if x == ":":
+        code = code + "110001 "
 
 print(code)
