@@ -1,4 +1,3 @@
-print("A und B + V und W sind vertauscht!")
 datei_v = input("Geben sie den Namen der Text Datei an:")
 
 datei = open(f"{datei_v}", "r")
